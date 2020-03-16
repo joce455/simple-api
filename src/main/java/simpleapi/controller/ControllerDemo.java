@@ -36,7 +36,7 @@ public class ControllerDemo {
 	}
 
 	@GetMapping(value = "/getClient")
-	public Cliente getCliente(int dni) {
+	public Cliente getCliente(String dni) {
 		Cliente c = clientService.findByDni(dni);
 		if (c != null) {
 			return c;
@@ -52,8 +52,8 @@ public class ControllerDemo {
 
 	}
 
-	@DeleteMapping(value = "/deleteClient")
-	public ResponseEntity<String> deleteCliente(int dni) {
+	@DeleteMapping(value = "/deleteClient/")
+	public ResponseEntity<String> deleteCliente(String dni) {
 		
 		clientService.deleteClient(dni);
 		return ResponseEntity.status(HttpStatus.OK).body("Client deleted");

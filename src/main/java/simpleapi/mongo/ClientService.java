@@ -5,7 +5,7 @@ import java.util.List;
 public interface  ClientService {
 	 List<Cliente> findAll();
 
-	    Cliente findByDni(int dni);
+	    Cliente findByDni(String dni);
 
 	    Cliente findByApellido(String email);
 
@@ -13,5 +13,5 @@ public interface  ClientService {
 
 	    void saveOrUpdateClient(Cliente client);
 
-	    void deleteClient(int id);
+	    void deleteClient(String id);
 }

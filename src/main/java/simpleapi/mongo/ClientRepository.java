@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ClientRepository extends MongoRepository <Cliente, String>{
-	Cliente findByDni(int dni);
+	Cliente findByDni(String dni);
 
 	Cliente findByApellido(String apellido);
 

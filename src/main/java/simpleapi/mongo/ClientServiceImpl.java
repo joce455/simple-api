@@ -18,7 +18,7 @@ public class ClientServiceImpl implements ClientService{
 	}
 
 	@Override
-	public Cliente findByDni(int dni) {
+	public Cliente findByDni(String dni) {
 		return clientRepository.findByDni(dni);
 	}
 
@@ -39,9 +39,9 @@ public class ClientServiceImpl implements ClientService{
 	}
 
 	@Override
-	public void deleteClient(int id) {
+	public void deleteClient(String id) {
 		
-		clientRepository.deleteById(String.valueOf(id));
+		clientRepository.deleteById(id);
 		
 	}
 
